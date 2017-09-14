@@ -8,7 +8,7 @@ FRIENDLY_NAME=$3
 # value must match file in https://github.com/Shippable/node/tree/master/scripts
 # specify the  Docker version and OS version that you want and look at the link above
 # to see the supported matrix.
-OS_DOCKER=ubu_16.04_docker_1.13.sh
+OS_DOCKER=ubu_14.04_docker_1.13.sh
 # Dummy IP address
 
 ## install packages we need
