@@ -9,6 +9,10 @@ SUBSCRIPTION_ID=$2
 # to see the supported matrix.
 OS_DOCKER=ubu_16.04_docker_1.13.sh
 
+## install JQ package
+sudo apt-get update
+sudo apt-get -f install jq
+
 # retrieve AWS instance id and external IP address for instance
 FRIENDLY_NAME=$(wget -q -O - http://instance-data/latest/meta-data/instance-id)
 IP_ADDRESS=$(dig +short myip.opendns.com @resolver1.opendns.com)
