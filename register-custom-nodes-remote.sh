@@ -41,5 +41,5 @@ sudo chmod +x shipInitNode.sh
 
 # run the init script
 #scp -i yourKey shipInitNode.sh username@node:shipInitNode.sh
-scp -i ambarish.pem shipInitNode.sh ubuntu@54.205.209.225:shipInitNode.sh
-ssh -i ambarish.pem ubuntu@54.205.209.225 'sudo ./shipInitNode.sh'
+scp -i test.pem shipInitNode.sh ubuntu@54.205.209.225:shipInitNode.sh
+ssh -i test.pem ubuntu@54.205.209.225 'sudo ./shipInitNode.sh'
