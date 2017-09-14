@@ -11,9 +11,11 @@ FRIENDLY_NAME=$3
 OS_DOCKER=ubu_16.04_docker_1.13.sh
 # Dummy IP address
 
-## install JQ package
+## install packages we need
 sudo apt-get update
 sudo apt-get -f install jq
+sudo apt-get -f install openssh-client
+sudo apt-get -f install curl
 
 # register the new node with Shippable via POST route
 export RESPONSE=$(curl --request POST \
