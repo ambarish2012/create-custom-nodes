@@ -4,6 +4,7 @@
 API_TOKEN=$1
 SUBSCRIPTION_ID=$2
 FRIENDLY_NAME=$3
+CLUSTER_ID=$4
 
 # value must match file in https://github.com/Shippable/node/tree/master/scripts
 # specify the  Docker version and OS version that you want and look at the link above
@@ -23,7 +24,7 @@ export RESPONSE=$(curl --request POST \
   --header "authorization: apiToken $API_TOKEN" \
   --header "cache-control: no-cache" \
   --header "content-type: application/json" \
-  --data "{\"subscriptionId\": \"$SUBSCRIPTION_ID\",\"friendlyName\": \"$FRIENDLY_NAME\",\"location\": \"1.1.1.1\",\"nodeInitScript\": \"$OS_DOCKER\",\"initializeSwap\": false,\"nodeTypeCode\": 7000,\"isShippableInitialized\": false}")
+  --data "{\"clusterId\": \"$CLUSTER_ID\", \"subscriptionId\": \"$SUBSCRIPTION_ID\",\"friendlyName\": \"$FRIENDLY_NAME\",\"location\": \"1.1.1.1\",\"nodeInitScript\": \"$OS_DOCKER\",\"initializeSwap\": false,\"nodeTypeCode\": 7000,\"isShippableInitialized\": false}")
 
 # extract the cluster node id from the response
 CLUSTER_NODE_ID=$(echo $RESPONSE | jq -r '.id')
