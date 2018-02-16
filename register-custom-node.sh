@@ -21,7 +21,7 @@ export RESPONSE=$(curl --request POST \
   --header "authorization: apiToken $API_TOKEN" \
   --header "cache-control: no-cache" \
   --header "content-type: application/json" \
-  --data "{\"clusterId\": \"$CLUSTER_ID\", \"subscriptionId\": \"$SUBSCRIPTION_ID\",\"friendlyName\": \"$FRIENDLY_NAME\",\"location\": \"1.1.1.1\",\"nodeInitScript\": \"$OS_DOCKER\",\"initializeSwap\": false,\"nodeTypeCode\": 7000,\"isShippableInitialized\": false}")
+  --data "{\"clusterId\": $CLUSTER_ID, \"subscriptionId\": \"$SUBSCRIPTION_ID\",\"friendlyName\": \"$FRIENDLY_NAME\",\"location\": \"1.1.1.1\",\"nodeInitScript\": \"$OS_DOCKER\",\"initializeSwap\": false,\"nodeTypeCode\": 7000,\"isShippableInitialized\": false}")
 
 # extract the cluster node id from the response
 CLUSTER_NODE_ID=$(echo $RESPONSE | jq -r '.id')
