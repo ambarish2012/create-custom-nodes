@@ -9,7 +9,12 @@ CLUSTER_ID=$4
 # value must match file in https://github.com/Shippable/node/tree/master/scripts
 # specify the  Docker version and OS version that you want and look at the link above
 # to see the supported matrix.
-OS_DOCKER=ubu_16.04_docker_1.13.sh
+
+# For Mac OS_DOCKER=x86_64/macOS_10.12/Docker_17.06.sh
+# For Windows OS_DOCKER=x86_64/WindowsServer_2016/Docker_17.06.ps1
+# For CentOS7 OS_DOCKER=x86_64/CentOS_7/Docker_17.06.sh
+# For Ubuntu14.04 OS_DOCKER=x86_64/Ubuntu_14.04/Docker_17.06.sh
+OS_DOCKER=x86_64/Ubuntu_16.04/Docker_17.06.sh
 
 ## install JQ package
 sudo apt-get update
