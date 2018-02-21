@@ -6,8 +6,8 @@ SUBSCRIPTION_ID=$2
 FRIENDLY_NAME=$3
 CLUSTER_ID=$4
 
-# value must match file in https://github.com/Shippable/node/tree/master/scripts
-# specify the  Docker version and OS version that you want and look at the link above
+# Value must match file in https://github.com/Shippable/node/tree/master/initScripts
+# Specify the  Docker version and OS version that you want and look at the link above
 # to see the supported matrix.
 
 # For Mac OS_DOCKER=x86_64/macOS_10.12/Docker_17.06.sh
