@@ -18,7 +18,7 @@ OS_DOCKER=x86_64/Ubuntu_16.04/Docker_17.06.sh
 
 ## install JQ package
 sudo apt-get update
-sudo apt-get -f install jq
+sudo apt-get -y install jq
 
 # register the new node with Shippable via POST route
 export RESPONSE=$(curl --request POST \
